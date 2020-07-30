@@ -5,6 +5,8 @@
 
 import csv
 import os
+import fileinput
+import sys
 
 #keep track all unique combinaiton of product/year.
 product_year=[]
@@ -55,5 +57,8 @@ with open('unsortedreport.csv', mode='rt') as f, open('./output/report.csv', 'w'
     for row in sorted2:
         writer.writerow(row)
 
+for line in fileinput.input("report.csv", inplace=1):
+    sys.stdout.write(line.lower())	
+	
 #Last, we remove the unsorted version of the output csv file. 
 os.remove('unsortedreport.csv')  
