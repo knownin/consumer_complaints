@@ -16,7 +16,7 @@ complaints_count=[]
 company_count=[]
 #each element corresponds to a dict of all diffrent companies receiving the corresponding product/year complaints with its complaint count.
 company_name_count=[]
-#./src/consumer_complaints.py
+
 #first, we read the input file and extract the parameters into the variables created above.
 with open("./input/complaints.csv", "rU") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -57,6 +57,7 @@ with open('unsortedreport.csv', mode='rt') as f, open('./output/report.csv', 'w'
     for row in sorted2:
         writer.writerow(row)
 
+#fourth, we change the entries into lower case.
 for line in fileinput.input("./output/report.csv", inplace=1):
     sys.stdout.write(line.lower())	
 	
