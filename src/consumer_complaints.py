@@ -14,9 +14,9 @@ complaints_count=[]
 company_count=[]
 #each element corresponds to a dict of all diffrent companies receiving the corresponding product/year complaints with its complaint count.
 company_name_count=[]
-
+#./src/consumer_complaints.py
 #first, we read the input file and extract the parameters into the variables created above.
-with open("complaints.csv", "rU") as csv_file:
+with open("./input/complaints.csv", "rU") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     next(csv_reader)  #skip the first line.
     for lines in csv_reader:
@@ -48,7 +48,7 @@ with open('unsortedreport.csv', 'w') as file:
 
 #Third, we sort the unsortedreport.csv first by first column[product]; then by second column [year]:
 
-with open('unsortedreport.csv', mode='rt') as f, open('report.csv', 'w') as final:
+with open('unsortedreport.csv', mode='rt') as f, open('./output/report.csv', 'w') as final:
     writer = csv.writer(final, delimiter=',')
     reader = csv.reader(f, delimiter=',')
     sorted2 = sorted(reader, key=lambda column: (column[0], int(column[1])))        
