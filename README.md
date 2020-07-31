@@ -18,7 +18,7 @@ The federal government provides a way for consumers to file complaints against c
 
 
 ## Input dataset
-To run this program, move an input file, `complaints.csv`, to the top-most `input` directory of the repository. The format of the input file can be found in the testing input files inlcuded in the insight_testsuite directory. The code will process it and write the results to an output file, `report.csv` that will be placed in the top-most `output` directory of the repository.
+To run this program, move an input file, `complaints.csv`, to the top-most `input` directory of the repository. The format of the input file can be found in the testing input files inlcuded in the top-most `insight_testsuite` directory. The code will process it and write the results to an output file, `report.csv` that will be placed in the top-most `output` directory of the repository.
 
 ## Expected output
 After reading and processing the input file, the code will create an output file, `report.csv`, with as many lines as unique pairs of product and year (of `Date received`) in the input file. 
@@ -33,6 +33,6 @@ Each line in the output file should list the following fields in the following o
 The lines in the output file are sorted by product (alphabetically) and year (ascending).
 
 ## Testing the code
-Under the insight_testsuite directory, there are multiple tests for the code, a separate folder for each test. Each test folder has a separate `input` subdirectory containing the `complaint.csv` input file, and an `output` subdirectory containing the expected `report.csv` output for that test.
+Under the top-most `insight_testsuite` directory, there are multiple tests for the code, a separate folder for each test. Each test folder has a separate `input` subdirectory containing the `complaint.csv` input file, and an `output` subdirectory containing the expected `report.csv` output for that test.
 
 The test (`test_1`) is given by the original code challenge.
