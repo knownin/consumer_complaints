@@ -80,9 +80,5 @@ As an engineer, you'll want to make sure you are thoroughly testing your code. U
 
 We've included one test (`test_1`), which contains the sample input and output files detailed in this Readme. To test your code, you can manually move each input test file into the top-level input directory, then run your program and compare the output with the expected output. Or you can write a script to do this automatically, but note we are not requiring you to write a test script.
 
-We do ask that you test your code using the <a href="https://insight-cc-submission.com/test-my-repo-link">web page</a> mentioned earlier to ensure your code can run in the Linux environment that we will review your code. The test page will check to see if your code passes `test_1`. If there are errors or if the results don't match what is expected, you should debug your code's behavior by yourself. If you receive system errors that you do not believe are due to your code, you can email cc@insightdataengineering.com for help.
 
-If your code must be compiled to run (e.g., javac, make), that compilation (as well as the execution) of your code must be specified in the `run.sh` script of your code repository. 
-
-For Python programmers, you can use Python 2 or Python 3. If you use the former, specify `python` in your `run.sh` script, or if you use the later, specify `python3`, which defaults to Python 3.5.2. Other options that could be use are `python3.7` or `python3.8`.
 
