@@ -23,7 +23,7 @@ To run this program, move an input file, `complaints.csv`, to the top-most `inpu
 ## Expected output
 After reading and processing the input file, the code will create an output file, `report.csv`, with as many lines as unique pairs of product and year (of `Date received`) in the input file. 
 
-Each line in the output file should list the following fields in the following order:
+Each line in the output file lists the following fields in the following order:
 * product (name should be written in all lowercase)
 * year
 * total number of complaints received for that product and year
