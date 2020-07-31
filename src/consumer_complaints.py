@@ -21,20 +21,22 @@ with open("./input/complaints.csv", "rU") as csv_file:
     next(csv_reader)  #skip the first line.
     for lines in csv_reader:
       #(lines[0], lines [1], lines[7]) are the three columns to our interest: date, product, company.      
-      
-      if (lines[1].lower(), lines[0][0:4]) not in product_year: #case 1: product and year is not recorded yet.
-        product_year.append((lines[1].lower(),lines[0][0:4]))
+      product = lines[1].lower()
+      company = lines[7].lower()
+      year = lines[0][0:4]
+      if (product, year) not in product_year: #case 1: product and year is not recorded yet.
+        product_year.append((product,year))
       	complaints_count.append(1)
       	company_count.append(1)
-      	company_name_count.append({lines[7].lower():1})
+      	company_name_count.append({company:1})
         
       else: #Case 2: that is if the product/year is already present in the list.
-        complaints_count[product_year.index((lines[1].lower(), lines[0][0:4]))]+=1 #we increment the corresponding value of the # of complaints for this combino
-      	if lines[7].lower() not in company_name_count[product_year.index((lines[1].lower(), lines[0][0:4]))].keys(): #Case 2.1: if the company that receives the complaint is new for the product/year.     		
-      		company_name_count[product_year.index((lines[1].lower(), lines[0][0:4]))][lines[7].lower()] = 1
-      		company_count[product_year.index((lines[1].lower(), lines[0][0:4]))]+=1
+        complaints_count[product_year.index((product, year))]+=1 #we increment the corresponding value of the # of complaints for this combino
+      	if company not in company_name_count[product_year.index((product, year))].keys(): #Case 2.1: if the company that receives the complaint is new for the product/year.     		
+      		company_name_count[product_year.index((product, year))][company] = 1
+      		company_count[product_year.index((product, year))]+=1
         else: #Case 2.2: the company is already present in the complaint list for the product/year, so we increment its count for percentage in company_name_count, but leave the company_count.
-      		company_name_count[product_year.index((lines[1].lower(), lines[0][0:4]))][lines[7].lower()]+=1
+      		company_name_count[product_year.index((product, year))][company]+=1
 
 
 #Second, we write the raw analysis result into the output file: 
@@ -54,8 +56,6 @@ with open('unsortedreport.csv', mode='rt') as f, open('./output/report.csv', 'w'
     sorted2 = sorted(reader, key=lambda column: (column[0], int(column[1])))        
     for row in sorted2:
         writer.writerow(row)
-
+	
 #Last, we remove the unsorted version of the output csv file. 
 os.remove('unsortedreport.csv')  
-
-
