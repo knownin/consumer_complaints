@@ -1,13 +1,10 @@
 # Consumer Complaints
 
-To do:
-summarize your approach and run instructions (if any) in your README.
-
 ## Table of Contents
 1. [Problem](README.md#problem)
 1. [Input Dataset](README.md#input-dataset)
 1. [Expected output](README.md#expected-output)
-1. [Testing your code](README.md#testing-your-code)
+1. [Testing the code](README.md#testing-your-code)
 
 ## Problem
 The federal government provides a way for consumers to file complaints against companies regarding different financial products, such as payment problems with a credit card or debt collection tactics. This project builds the tool to identify the number of complaints filed and how they're spread across different companies. 
