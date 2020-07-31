@@ -18,7 +18,7 @@ The federal government provides a way for consumers to file complaints against c
 
 
 ## Input dataset
-To run this program, move an input file, `complaints.csv`, to the top-most `input` directory of the repository. The code will process it and write the results to an output file, `report.csv` that will be placed in the top-most `output` directory of the repositor
+To run this program, move an input file, `complaints.csv`, to the top-most `input` directory of the repository. The code will process it and write the results to an output file, `report.csv` that will be placed in the top-most `output` directory of the repository.
 
 ## Expected output
 After reading and processing the input file, the code will create an output file, `report.csv`, with as many lines as unique pairs of product and year (of `Date received`) in the input file. 
