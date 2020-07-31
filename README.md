@@ -18,7 +18,7 @@ The federal government provides a way for consumers to file complaints against c
 
 ## The Approach
 1. The source code included in this project is written in the langauge of Python 2. 
-2. The source code uses only the built-in data structure modules that are built into the standard Python 2 library, including csv, sys, fileinput, and os.  
+2. The source code uses only the built-in data structure modules that are built into the standard Python 2 library, including csv and os. 
 3. The source code consists of functional modules that are separated by comments explaining their respective purposes. 
 
 
