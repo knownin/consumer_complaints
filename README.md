@@ -15,7 +15,7 @@ The federal government provides a way for consumers to file complaints against c
 1. The source code included in this project is written in the langauge of Python 2. 
 2. The source code uses only the built-in data structure modules that are in the standard Python 2 library, including csv and os. 
 3. The source code consists of functional modules that are separated by comments explaining their respective purposes.
-4. In terms of the data strutures used, the source code use a composite dictionary to store the relevant information, where each key is a unique combination of product and year and each value is list of three elements: [the # of complaints that the product and year receives, the # of distinct companies that the product and year receives, an inner dictionary where the keys are the names of all companies receives complaints for the product and year and the values are the corresponding # of complaints each of them receives].
+4. In terms of the data strutures used, the source code uses a composite dictionary `product_year` to store the relevant information, where each key is a unique combination of product and year and each value is a list of three elements: [the # of complaints that the product and year receives, the # of distinct companies that the product and year receives, an inner dictionary where the keys are the names of all companies receiving complaints for the product and year and the values are their corresponding # of complaints].
  
   ** The point of using a dictionary for this program is mainly based on its time effciciency (average O(1)) for searching keys, and adding new entries, and its space effciency in   not having a fixed size. 
 
