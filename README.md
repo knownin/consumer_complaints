@@ -17,7 +17,7 @@ The federal government provides a way for consumers to file complaints against c
 3. The source code consists of functional modules that are separated by comments explaining their respective purposes.
 4. In terms of the data strutures used, the source code use a composite dictionary to store the relevant information, where each key is a unique combination of product and year and each value is list of three elements: [the # of complaints that the product and year receives, the # of distinct companies that the product and year receives, an inner dictionary where the keys are the names of all companies receives complaints for the product and year and the values are the corresponding # of complaints each of them receives].
  
-  ** The point of using a dictionary for this program is mainly based on its time effciciency for searching key, and add new entry, and space effciency in not having a fixed         size. 
+  ** The point of using a dictionary for this program is mainly based on its time effciciency (average O(1)) for searching keys, and adding new entries, and its space effciency in   not having a fixed size. 
 
 
 ## Input dataset
